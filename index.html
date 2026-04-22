@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林莹 · AI产品经理</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">林莹</a>
+      <ul class="nav-links">
+        <li><a href="#ai-showcase">AI能力</a></li>
+        <li><a href="#experience">经历</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#awards">奖项</a></li>
+        <li><a href="#contact" class="nav-cta">联系我</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">中国传媒大学 · 数据科学与大数据技术 · 2026届</p>
+      <h1 class="hero-name">林莹</h1>
+      <div class="hero-role">
+        <span class="hero-role-prefix">我是一名</span>
+        <span class="hero-role-text" id="typingText"></span>
+        <span class="hero-cursor">|</span>
+      </div>
+      <div class="hero-tools">
+        <div class="tools-track">
+          <span>Coze</span><span>Claude Code</span><span>Midjourney</span>
+          <span>即梦AI</span><span>可灵AI</span><span>ChatGPT</span>
+          <span>飞书aPaaS</span><span>Coze</span><span>Claude Code</span>
+          <span>Midjourney</span><span>即梦AI</span><span>可灵AI</span>
+          <span>ChatGPT</span><span>飞书aPaaS</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#ai-showcase" class="btn btn-primary">查看AI项目</a>
+        <a href="assets/resume.pdf" class="btn btn-secondary" download>下载简历</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>向下滚动</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left fade-in">
+          <div class="avatar-wrap">
+            <div class="avatar-placeholder">LY</div>
+          </div>
+          <h2 class="about-name">林莹</h2>
+          <p class="about-bio">
+            中国传媒大学数据科学专业在读，专注于AI产品与工作流搭建。
+            在蓝色光标和百度地图积累了扎实的AI产品实习经验，
+            擅长将大模型能力落地为可量化的业务成果。
+          </p>
+          <div class="about-tags">
+            <span>AI产品经理</span>
+            <span>工作流搭建</span>
+            <span>数据分析</span>
+            <span>内容创意</span>
+          </div>
+        </div>
+        <div class="about-right fade-in">
+          <h3 class="radar-title">能力雷达</h3>
+          <svg class="radar-chart" id="radarChart" viewBox="0 0 300 300"></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI SHOWCASE -->
+  <section class="ai-showcase section" id="ai-showcase">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">AI能力展示</span>
+        <h2 class="section-title">我搭建的AI工作流</h2>
+        <p class="section-desc">不只是"会用AI工具"——这些是我亲手设计并落地的自动化工作流</p>
+      </div>
+      <div class="workflow-grid">
+
+        <!-- Card 1 -->
+        <div class="workflow-card fade-in" data-delay="0">
+          <div class="wf-header">
+            <span class="wf-tag">电商广告自动化</span>
+            <span class="wf-company">蓝色光标</span>
+          </div>
+          <h3 class="wf-title">Lazada广告图生成工作流</h3>
+          <div class="wf-flow">
+            <div class="wf-step">链接输入</div>
+            <div class="wf-arrow"></div>
+            <div class="wf-step">API调用</div>
+            <div class="wf-arrow"></div>
+            <div class="wf-step">模板匹配</div>
+            <div class="wf-arrow"></div>
+            <div class="wf-step highlight">海报输出</div>
+          </div>
+          <div class="wf-metrics">
+            <div class="metric">
+              <span class="metric-num" data-target="1000">0</span>
+              <span class="metric-unit">+张/周</span>
+              <span class="metric-label">周产能</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num" data-target="0.9" data-decimal="1">0</span>
+              <span class="metric-unit">pts↑</span>
+              <span class="metric-label">ROI提升</span>
+            </div>
+          </div>
+          <div class="wf-tech">
+            <span>飞书多维表格</span><span>API</span><span>A/B Test</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="workflow-card fade-in" data-delay="100">
+          <div class="wf-header">
+            <span class="wf-tag">短剧内容AI化</span>
+            <span class="wf-company">蓝色光标</span>
+          </div>
+          <h3 class="wf-title">短剧AI Hook工作流</h3>
+          <div class="wf-flow">
+            <div class="wf-step">解说生成</div>
+            <div class="wf-arrow"></div>
+            <div class="wf-step">分镜设计</div>
+            <div class="wf-arrow"></div>
+            <div class="wf-step highlight">成片输出</div>
+          </div>
+          <div class="wf-hook-bar">
+            <div class="hook-label">黄金三秒 Hook</div>
+            <div class="hook-track">
+              <div class="hook-fill" id="hookFill"></div>
+              <span class="hook-mark">3s</span>
+            </div>
+          </div>
+          <div class="wf-tech">
+            <span>Coze</span><span>Claude Code</span><span>全链路打通</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="workflow-card fade-in" data-delay="200">
+          <div class="wf-header">
+            <span class="wf-tag">多模态生成</span>
+            <span class="wf-company">蓝色光标</span>
+          </div>
+          <h3 class="wf-title">多模态素材批量生成</h3>
+          <div class="wf-parallel">
+            <div class="parallel-track">
+              <div class="pt-label">图片生成</div>
+              <div class="pt-bar"><div class="pt-fill"></div></div>
+            </div>
+            <div class="parallel-track">
+              <div class="pt-label">微动视频</div>
+              <div class="pt-bar"><div class="pt-fill" style="animation-delay:.3s"></div></div>
+            </div>
+          </div>
+          <div class="wf-metrics">
+            <div class="metric single">
+              <span class="metric-badge">零边际成本</span>
+              <span class="metric-label">素材生产</span>
+            </div>
+          </div>
+          <div class="wf-tech">
+            <span>参数化配置</span><span>并行工作流</span><span>多渠道投放</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">实习经历</span>
+        <h2 class="section-title">工作经历</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025.12 — 2026.03</div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-company">蓝色光标</h3>
+                <p class="tc-role">AI产品经理实习生</p>
+              </div>
+              <span class="tc-badge ai">AI产品</span>
+            </div>
+            <ul class="tc-list">
+              <li>基于飞书多维表格+API架构 Lazada 广告图生成工作流，周产能突破1000+张，ROI较大盘提升0.9个点</li>
+              <li>利用Coze平台编排AI Agent，实现短剧"长剧剪短"自动化链路（高光识别-剪辑-压片）</li>
+              <li>基于Coze+Claude Code搭建短剧AI Hook工作流，打通"解说-分镜-成片"全链路</li>
+              <li>搭建美食类"图+微动视频"并行生成工作流，实现素材生产零边际成本</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025.07 — 2025.11</div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-company">百度地图</h3>
+                <p class="tc-role">语音交互大模型产品实习生</p>
+              </div>
+              <span class="tc-badge lm">大模型</span>
+            </div>
+            <ul class="tc-list">
+              <li>参与跨模态语音大模型MRD编写，梳理语音交互核心痛点，协助提出端到端语音交互产品方案</li>
+              <li>参与意图指代与意图澄清场景的数据集构建，制定标注流程和规范</li>
+              <li>协助制定功能评测标准，参与多轮测试验证并整理体验分析报告</li>
+              <li>负责将用户需求、数据设计与算法改进建议传递给算法团队</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">项目经历</span>
+        <h2 class="section-title">代表项目</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card fade-in">
+          <div class="pc-img pc-img-1">
+            <span class="pc-icon">🏮</span>
+          </div>
+          <div class="pc-body">
+            <div class="pc-tags"><span>AIGC</span><span>微信小程序</span><span>非遗文创</span></div>
+            <h3 class="pc-title">云境遗梦</h3>
+            <p class="pc-desc">以非遗文化为主题，采用AIGC文生图技术和网页端互动游戏引擎塑造IP形象，通过微信小程序打造高效的IP开发与运营模式。</p>
+            <p class="pc-role">独立编写与测试微信小程序代码；基于NextHuman创建数字人增强交互体验</p>
+            <span class="pc-award">🏆 二等奖</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-in" data-delay="100">
+          <div class="pc-img pc-img-2">
+            <span class="pc-icon">📊</span>
+          </div>
+          <div class="pc-body">
+            <div class="pc-tags"><span>文本挖掘</span><span>聚类分析</span><span>SEM建模</span></div>
+            <h3 class="pc-title">"谷子"经济调研</h3>
+            <p class="pc-desc">系统分析二次元"谷子"市场规模、产业链及消费者心理，构建认可度模型，填补细分领域研究空白。</p>
+            <p class="pc-role">运用文本挖掘、数据爬虫、聚类分析与结构方程模型进行市场分析</p>
+            <span class="pc-award">全国大学生市场调查大赛</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-in" data-delay="200">
+          <div class="pc-img pc-img-3">
+            <span class="pc-icon">🎨</span>
+          </div>
+          <div class="pc-body">
+            <div class="pc-tags"><span>Midjourney</span><span>ChatGPT</span><span>公益创意</span></div>
+            <h3 class="pc-title">AIGC公益广告</h3>
+            <p class="pc-desc">针对孤独症儿童社交困境，结合Midjourney、ChatGPT等AI工具进行视觉呈现，产出系列公益广告。</p>
+            <p class="pc-role">统筹项目策划进度，主导调研分析并提炼核心洞察</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards section" id="awards">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">荣誉奖项</span>
+        <h2 class="section-title">所获荣誉</h2>
+      </div>
+      <div class="awards-scroll fade-in">
+        <div class="awards-track">
+          <div class="award-card featured">
+            <span class="award-year">2025.12</span>
+            <h4 class="award-name">国家励志奖学金</h4>
+            <span class="award-cat">综合荣誉</span>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2025.06</span>
+            <h4 class="award-name">AI与未来媒体创新大赛</h4>
+            <span class="award-cat">AI技术融合奖 · 技术创新类</span>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2025.01</span>
+            <h4 class="award-name">新工科创新数字技能竞赛</h4>
+            <span class="award-cat">二等奖 · 技术应用类</span>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2024.12</span>
+            <h4 class="award-name">校级单项奖学金</h4>
+            <span class="award-cat">社会实践类</span>
+          </div>
+          <div class="award-card">
+            <span class="award-year">2024.12</span>
+            <h4 class="award-name">APMCM亚太数学建模竞赛</h4>
+            <span class="award-cat">三等奖 · 建模与数据分析方向</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">技能矩阵</span>
+        <h2 class="section-title">核心技能</h2>
+      </div>
+      <div class="skills-grid fade-in">
+        <div class="skill-quad ai-tools">
+          <h4 class="sq-title">AI工具</h4>
+          <div class="sq-tags">
+            <span>Coze</span><span>Claude Code</span><span>Midjourney</span>
+            <span>即梦AI</span><span>可灵AI</span><span>ChatGPT</span>
+          </div>
+        </div>
+        <div class="skill-quad data">
+          <h4 class="sq-title">数据分析</h4>
+          <div class="sq-tags">
+            <span>SQL</span><span>R</span><span>SPSS</span>
+            <span>Eviews</span><span>Excel高阶</span>
+          </div>
+        </div>
+        <div class="skill-quad product">
+          <h4 class="sq-title">产品运营</h4>
+          <div class="sq-tags">
+            <span>需求分析</span><span>用户画像</span><span>POC工作流</span>
+            <span>A/B Test</span><span>MRD撰写</span>
+          </div>
+        </div>
+        <div class="skill-quad dev">
+          <h4 class="sq-title">开发与工具</h4>
+          <div class="sq-tags">
+            <span>Web前端</span><span>微信小程序</span><span>飞书aPaaS</span>
+            <span>Photoshop</span><span>剪映</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-inner fade-in">
+        <span class="section-label">联系我</span>
+        <h2 class="contact-title">正在寻找AI产品 / 运营方向机会</h2>
+        <p class="contact-sub">2026届毕业生，欢迎实习或全职合作</p>
+        <div class="contact-links">
+          <a href="mailto:ying10819@163.com" class="contact-item">
+            <span class="ci-icon">✉</span>
+            <span>ying10819@163.com</span>
+          </a>
+          <a href="tel:17389891542" class="contact-item">
+            <span class="ci-icon">☎</span>
+            <span>173 8989 1542</span>
+          </a>
+        </div>
+        <a href="assets/resume.pdf" class="btn btn-primary" download>下载完整简历</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 林莹 · 用AI构建，用数据说话</p>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
