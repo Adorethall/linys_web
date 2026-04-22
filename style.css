@@ -501,21 +501,21 @@ img { display: block; max-width: 100%; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 120px;
+  left: 160px;
   top: 0; bottom: 0;
   width: 1px;
   background: var(--border);
 }
 .timeline-item {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 0 32px;
   margin-bottom: 48px;
   position: relative;
 }
 .timeline-dot {
   position: absolute;
-  left: 112px;
+  left: 152px;
   top: 6px;
   width: 16px;
   height: 16px;
@@ -528,6 +528,7 @@ img { display: block; max-width: 100%; }
   font-size: .78rem;
   color: var(--text-light);
   padding-top: 4px;
+  padding-right: 24px;
   text-align: right;
   line-height: 1.4;
 }
@@ -733,7 +734,7 @@ img { display: block; max-width: 100%; }
   .timeline::before { left: 0; }
   .timeline-item { grid-template-columns: 1fr; padding-left: 24px; }
   .timeline-dot { left: -8px; }
-  .timeline-date { text-align: left; padding-top: 0; margin-bottom: 8px; }
+  .timeline-date { text-align: left; padding-top: 0; margin-bottom: 8px}
 }
 @media (max-width: 640px) {
   .section { padding: 64px 0; }
