@@ -672,11 +672,8 @@ img { display: block; max-width: 100%; }
   padding: 24px;
   transition: box-shadow .25s, transform .25s, border-color .25s;
 }
-.skill-quad:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--accent); }
-.skill-quad.ai-tools { border-top: 3px solid var(--accent); }
-.skill-quad.data { border-top: 3px solid var(--accent); }
-.skill-quad.product { border-top: 3px solid var(--accent); }
-.skill-quad.dev { border-top: 3px solid var(--accent); }
+.skill-quad:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-top: 3px solid var(--accent) }
+
 .sq-title {
   font-family: var(--font-serif);
   font-size: 1rem;
