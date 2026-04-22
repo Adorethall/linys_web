@@ -528,7 +528,7 @@ img { display: block; max-width: 100%; }
   font-size: .78rem;
   color: var(--text-light);
   padding-top: 4px;
-  padding-right: 24px;
+  padding-right: 20px;
   text-align: right;
   line-height: 1.4;
 }
