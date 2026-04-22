@@ -501,21 +501,21 @@ img { display: block; max-width: 100%; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 160px;
+  left: 108px;
   top: 0; bottom: 0;
   width: 1px;
   background: var(--border);
 }
 .timeline-item {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 0 32px;
+  grid-template-columns: 95px 1fr;
+  gap: 0 36px;
   margin-bottom: 48px;
   position: relative;
 }
 .timeline-dot {
   position: absolute;
-  left: 152px;
+  left: 100px;
   top: 6px;
   width: 16px;
   height: 16px;
@@ -525,12 +525,14 @@ img { display: block; max-width: 100%; }
   z-index: 1;
 }
 .timeline-date {
-  font-size: .78rem;
+  font-size: .75rem;
   color: var(--text-light);
   padding-top: 4px;
-  padding-right: 20px;
+  padding-left: -160px;
   text-align: right;
-  line-height: 1.4;
+  margin-left: -20px;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 .timeline-card {
   background: var(--bg-card);
